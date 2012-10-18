@@ -1,6 +1,6 @@
 ===  Facebook Widget ===
-Contributors: Milap 
-Donate link:https://patelmilap.wordpress.com/about/
+Contributors: Milap
+Donate link:https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=659roc1oyY7qZykK
 Tags: Facebook
 Requires at least: 3.0.1
 Tested up to: 3.4
