@@ -1,6 +1,6 @@
 ===  Facebook Widget ===
 Contributors: Milap
-Donate link:https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=659roc1oyY7qZykK
+Donate link:https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=pKLXNDz1Nvf7CtNMpuToX8metX5YGB0JXOD140NKegrFE8XvgWqDaR7567C&dispatch=5885d80a13c0db1f8e263663d3faee8d0b7e678a25d883d0bcf119ae9b66ba33
 Tags: Facebook
 Requires at least: 3.0.1
 Tested up to: 3.4
