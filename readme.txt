@@ -12,9 +12,11 @@ This widget adds a Simple Facebook page Like Widget into your WordPress website 
 
 This widget will provide you the most simple and attractive way to display facebook page likes into your wordpress sidebar. It is very easy to configure with admin area. You just need to acticate plugin and drag this widget like other widgets. Just add aplication id from your cerated facebook application, add it into widget and also URL of your facebook page. You also have other options like show faces , show Data Stream and Header.
 
- 
 
-In this second version, support to short code is added to display facebook like plugin into your post and pages. Also i have managed code in a better way than previous version.
+In this second version, support to short code is added to display facebook like plugin into your post and pages.
+Open your Post or Page, Add [fb_widget] into POst or Page, Save it. It's done.
+
+Also i have managed code in a better way than previous version. :-)
 
 You can check this plugin in action at :
 
