@@ -16,11 +16,9 @@ This widget will provide you the most simple and attractive way to display faceb
 In this second version, support to short code is added to display facebook like plugin into your post and pages.
 Open your Post or Page, Add [fb_widget] into POst or Page, Save it. It's done.
 
+Also added border color option for the widget.
+
 Also i have managed code in a better way than previous version. :-)
-
-You can check this plugin in action at :
-
-<a href=\"http://milap.site90.net/wordpress/\">http://milap.site90.net/wordpress/</a>
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on facebook.com/milap112. I will reply you as soon as possible.
 

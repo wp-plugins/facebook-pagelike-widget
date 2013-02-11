@@ -24,6 +24,7 @@ class facebook_widget extends WP_Widget {
 		$width			=	$instance['width'];
 		$height			=	$instance['height'];
 		$color_scheme	=	$instance['color_scheme'];
+		$border			=	$instance['border'];
 
 		echo $before_widget;
         if ( $title )
@@ -35,7 +36,7 @@ class facebook_widget extends WP_Widget {
         wp_localize_script( 'myownscript', 'vars', $local_variables );
         
         echo '<div id="fb-root"></div>
-        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-stream="'.$show_stream.'" data-header="'.$show_header.'"></div>';
+        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-stream="'.$show_stream.'" data-header="'.$show_header.'" data-border-color="'.$border.'"></div>';
         echo $after_widget;
     }
 
@@ -54,6 +55,7 @@ class facebook_widget extends WP_Widget {
 		$instance['width'] 			=	strip_tags($new_instance['width']);
 		$instance['height'] 		=	strip_tags($new_instance['height']);
 		$instance['color_scheme']	=	strip_tags($new_instance['color_scheme']);
+		$instance['border']			=	strip_tags($new_instance['border']);
 
         return $instance;
     }
@@ -73,6 +75,7 @@ class facebook_widget extends WP_Widget {
 		$width			=	esc_attr($instance['width']);
 		$height			=	esc_attr($instance['height']);
 		$color_scheme	=	esc_attr($instance['color_scheme']);
+		$border			=	esc_attr($instance['border']);
 		
 		?>
 		<p>
@@ -127,6 +130,11 @@ class facebook_widget extends WP_Widget {
     			<option value="light"<?php selected( $instance['color_scheme'], 'light' ); ?>><?php _e('Light'); ?></option>
     			<option value="dark"<?php selected( $instance['color_scheme'], 'dark' ); ?>><?php _e('Dark'); ?></option>
         	</select>
+        </p>
+        
+        <p>
+        	<label for="<?php echo $this->get_field_id('border'); ?>"><?php _e('Border Color:'); ?></label>
+        	<input size="5" id="<?php echo $this->get_field_id('border'); ?>" name="<?php echo $this->get_field_name('border'); ?>" type="text" value="<?php echo $border; ?>" />
         </p>
         
         <?php
