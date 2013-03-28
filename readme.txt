@@ -3,7 +3,7 @@ Contributors: Milap
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=nirav%2esn%40gmail%2ecom&lc=US&item_name=Milap%20Patel&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest
 Tags: Facebook
 Requires at least: 3.0.1
-Tested up to: 3.5
+Tested up to: 3.5.1
 Stable tag: trunk
 
 This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar.Also enabled short code for POST and PAGES.
@@ -19,6 +19,8 @@ Open your Post or Page, Add [fb_widget] into POst or Page, Save it. It's done.
 Also added border color option for the widget.
 
 Also i have managed code in a better way than previous version. :-)
+
+Added support for localization (Multilanguage support)(Added .pot file)
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on facebook.com/milap112. I will reply you as soon as possible.
 
