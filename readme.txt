@@ -22,6 +22,10 @@ Also i have managed code in a better way than previous version. :-)
 
 Added support for localization (Multilanguage support)(Added .pot file)
 
+Version 2.1
+
+Added option to show or hide border from widget.
+
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on facebook.com/milap112. I will reply you as soon as possible.
 
 God bless you..!!

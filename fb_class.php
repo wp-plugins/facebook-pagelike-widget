@@ -24,7 +24,7 @@ class facebook_widget extends WP_Widget {
 		$width			=	$instance['width'];
 		$height			=	$instance['height'];
 		$color_scheme	=	$instance['color_scheme'];
-		$border			=	$instance['border'];
+		$show_border	=	$instance['show_border'];
 
 		echo $before_widget;
         if ( $title )
@@ -36,7 +36,7 @@ class facebook_widget extends WP_Widget {
         wp_localize_script( 'myownscript', 'vars', $local_variables );
         
         echo '<div id="fb-root"></div>
-        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-stream="'.$show_stream.'" data-header="'.$show_header.'" data-border-color="'.$border.'"></div>';
+        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-header="'.$show_header.'" data-stream="'.$show_stream.'" data-show-border="'.$show_border.'"></div>';
         echo $after_widget;
     }
 
@@ -44,7 +44,7 @@ class facebook_widget extends WP_Widget {
     function update($new_instance, $old_instance) {
 		
     	$instance	=	$old_instance;
-		$instance	=	array('show_faces' => 0,'data_stream' => 0,'show_header' => 0);
+		$instance	=	array('show_faces' => 0,'data_stream' => 0,'show_header' => 0,'show_border'=>0);
 		foreach ( $instance as $field => $val ) {
 			if ( isset($new_instance[$field]) )
 				$instance[$field] = 1;
@@ -55,7 +55,7 @@ class facebook_widget extends WP_Widget {
 		$instance['width'] 			=	strip_tags($new_instance['width']);
 		$instance['height'] 		=	strip_tags($new_instance['height']);
 		$instance['color_scheme']	=	strip_tags($new_instance['color_scheme']);
-		$instance['border']			=	strip_tags($new_instance['border']);
+		$instance['show_border']	=	strip_tags($new_instance['show_border']);
 
         return $instance;
     }
@@ -67,7 +67,7 @@ class facebook_widget extends WP_Widget {
     	 * Set Default Value for widget form
     	 */
     	
-    	$default_value	=	array("width" => "220", "height" => "432", "show_faces" => 1, "show_header" => 1);
+    	$default_value	=	array("width" => "250", "height" => "350", "show_faces" => 1, "show_header" => 1,"show_border"=>0);
     	$instance		=	wp_parse_args((array)$instance,$default_value);
         $title			=	esc_attr($instance['title']);
         $app_id 		=   esc_attr($instance['app_id']);
@@ -75,7 +75,7 @@ class facebook_widget extends WP_Widget {
 		$width			=	esc_attr($instance['width']);
 		$height			=	esc_attr($instance['height']);
 		$color_scheme	=	esc_attr($instance['color_scheme']);
-		$border			=	esc_attr($instance['border']);
+		$show_border	=	esc_attr($instance['show_border']);
 		
 		?>
 		<p>
@@ -132,9 +132,12 @@ class facebook_widget extends WP_Widget {
         	</select>
         </p>
         
-        <p>
-        	<label for="<?php echo $this->get_field_id('border'); ?>"><?php _e('Border Color:'); ?></label>
-        	<input size="5" id="<?php echo $this->get_field_id('border'); ?>" name="<?php echo $this->get_field_name('border'); ?>" type="text" value="<?php echo $border; ?>" />
+       <p>
+        	<label for="<?php echo $this->get_field_id('show_border'); ?>"><?php _e('Show Border:'); ?></label>
+    		<select name="<?php echo $this->get_field_name('show_border'); ?>" id="<?php echo $this->get_field_id('show_border'); ?>">
+    			<option value="Yes"<?php selected( $instance['show_border'], 'Yes' ); ?>><?php _e('Yes'); ?></option>
+    			<option value="No"<?php selected( $instance['show_border'], 'No' ); ?>><?php _e('No'); ?></option>
+        	</select>
         </p>
         
         <?php
