@@ -1,7 +1,7 @@
 === Facebook Widget ===
 Contributors: Milap 
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=nirav%2esn%40gmail%2ecom&lc=US&item_name=Milap%20Patel&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest
-Tags: Facebook
+Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking
 Requires at least: 3.0.1
 Tested up to: 3.7.1
 Stable tag: trunk
