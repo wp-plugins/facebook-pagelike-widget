@@ -1,9 +1,9 @@
 === Facebook Widget ===
 Contributors: Milap 
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=nirav%2esn%40gmail%2ecom&lc=US&item_name=Milap%20Patel&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest
-Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking
+Tags: Facebook
 Requires at least: 3.0.1
-Tested up to: 3.5.1
+Tested up to: 3.7.1
 Stable tag: trunk
 
 This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar.Also enabled short code for POST and PAGES.
@@ -25,6 +25,8 @@ Added support for localization (Multilanguage support)(Added .pot file)
 Version 2.1
 
 Added option to show or hide border from widget.
+
+Added default values to all needed fields while you setup widget, it will help you.
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on facebook.com/milap112. I will reply you as soon as possible.
 

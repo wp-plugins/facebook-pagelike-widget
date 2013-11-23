@@ -80,17 +80,17 @@ class facebook_widget extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo empty($title) ? 'Like Us On Facebook':$title; ?>" />
         </p>
 		
         <p>
         	<label for="<?php echo $this->get_field_id('app_id'); ?>"><?php _e('Facebook Application Id:'); ?></label>
-        	<input class="widefat" id="<?php echo $this->get_field_id('app_id'); ?>" name="<?php echo $this->get_field_name('app_id'); ?>" type="text" value="<?php echo $app_id; ?>" />
+        	<input class="widefat" id="<?php echo $this->get_field_id('app_id'); ?>" name="<?php echo $this->get_field_name('app_id'); ?>" type="text" value="<?php echo empty($app_id) ? '503595753002055' : $app_id;?>" />
         </p>
         
         <p>
           	<label for="<?php echo $this->get_field_id('fb_url'); ?>"><?php _e('Facebook Page Url:'); ?></label>
-          	<input class="widefat" id="<?php echo $this->get_field_id('fb_url'); ?>" name="<?php echo $this->get_field_name('fb_url'); ?>" type="text" value="<?php echo $fb_url; ?>" />
+          	<input class="widefat" id="<?php echo $this->get_field_id('fb_url'); ?>" name="<?php echo $this->get_field_name('fb_url'); ?>" type="text" value="<?php echo empty($fb_url) ? 'http://www.facebook.com/wordpress' : $fb_url; ?>" />
           	<small>
           		<?php _e('Works with only');?>
           		<a href="http://www.facebook.com/help/?faq=174987089221178" target="_blank">
@@ -101,12 +101,12 @@ class facebook_widget extends WP_Widget {
         
         <p>
         	<input class="checkbox" type="checkbox" <?php checked($instance['show_faces'], true) ?> id="<?php echo $this->get_field_id('show_faces'); ?>" name="<?php echo $this->get_field_name('show_faces'); ?>" />
-        	<label for="<?php echo $this->get_field_id('show_faces'); ?>"><?php _e('Show faces'); ?></label>
+        	<label for="<?php echo $this->get_field_id('show_faces'); ?>"><?php _e('Show Friends\' Faces'); ?></label>
         </p>
         
         <p>
         	<input class="checkbox" type="checkbox" <?php checked($instance['data_stream'], true) ?> id="<?php echo $this->get_field_id('data_stream'); ?>" name="<?php echo $this->get_field_name('data_stream'); ?>" />
-        	<label for="<?php echo $this->get_field_id('data_stream'); ?>"><?php _e('Show Data Stream'); ?></label>
+        	<label for="<?php echo $this->get_field_id('data_stream'); ?>"><?php _e('Show Posts'); ?></label>
         </p> 
         
         <p>
