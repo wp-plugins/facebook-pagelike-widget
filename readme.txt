@@ -1,6 +1,6 @@
 === Facebook Widget ===
 Contributors: Milap 
-Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=nirav%2esn%40gmail%2ecom&lc=US&item_name=Milap%20Patel&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest
+Donate link:https://www.paypal.com/cgi-bin/webscr?business=cemilap.88@gmail.com&cmd=_xclick&currency_code=USD&amount=5&item_name=Offer%20me%20coffee
 Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking
 Requires at least: 3.0.1
 Tested up to: 3.7.1
@@ -28,7 +28,7 @@ Added option to show or hide border from widget.
 
 Added default values to all needed fields while you setup widget, it will help you.
 
-If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on facebook.com/milap112. I will reply you as soon as possible.
+If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap</a>. I will reply you as soon as possible.
 
 God bless you..!!
 
