@@ -12,31 +12,33 @@ class facebook_widget extends WP_Widget {
     /** @see WP_Widget::widget */
     function widget($args, $instance) {
     	
-    	global $app_id;
+    	global $app_id,$select_lng;
         extract( $args );
         
 		$title 			=	apply_filters('widget_title', $instance['title']);
-		$app_id         =   $instance['app_id'];
+		$app_id                 =       $instance['app_id'];
 		$fb_url 		=	$instance['fb_url'];
-		$show_faces 	=	isset($instance['show_faces']) ? $instance['show_faces'] : false;
-		$show_stream	=	isset($instance['data_stream']) ? $instance['data_stream'] : false;
-		$show_header	=	isset($instance['show_header']) ? $instance['show_header'] : false;
+		$show_faces             =	isset($instance['show_faces']) ? $instance['show_faces'] : false;
+		$show_stream            =	isset($instance['data_stream']) ? $instance['data_stream'] : false;
+		$show_header            =	isset($instance['show_header']) ? $instance['show_header'] : false;
 		$width			=	$instance['width'];
 		$height			=	$instance['height'];
-		$color_scheme	=	$instance['color_scheme'];
-		$show_border	=	$instance['show_border'];
-
+		$color_scheme           =	$instance['color_scheme'];
+		$show_border            =	$instance['show_border'];
+		$custom_css             =	$instance['custom_css'];
+		$select_lng             =	$instance['select_lng'];
+                
 		echo $before_widget;
         if ( $title )
         echo $before_title . $title . $after_title;
         
         wp_register_script( 'myownscript', FB_WIDGET_PLUGIN_URL . 'fb.js' , array('jquery'));
         wp_enqueue_script( 'myownscript' );
-        $local_variables = array('app_id' => $app_id);
+        $local_variables = array('app_id' => $app_id,'select_lng'=>$select_lng);
         wp_localize_script( 'myownscript', 'vars', $local_variables );
         
         echo '<div id="fb-root"></div>
-        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-header="'.$show_header.'" data-stream="'.$show_stream.'" data-show-border="'.$show_border.'"></div>';
+        <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-header="'.$show_header.'" data-stream="'.$show_stream.'" data-show-border="'.$show_border.'" style="'.$custom_css.'"></div>';
         echo $after_widget;
     }
 
@@ -49,13 +51,16 @@ class facebook_widget extends WP_Widget {
 			if ( isset($new_instance[$field]) )
 				$instance[$field] = 1;
 		}
-		$instance['title']			=	strip_tags($new_instance['title']);
-		$instance['app_id'] 		=   strip_tags($new_instance['app_id']);
+                
+		$instance['title']		=       strip_tags($new_instance['title']);
+		$instance['app_id'] 		=       strip_tags($new_instance['app_id']);
 		$instance['fb_url'] 		=	strip_tags($new_instance['fb_url']);
-		$instance['width'] 			=	strip_tags($new_instance['width']);
+		$instance['width'] 		=	strip_tags($new_instance['width']);
 		$instance['height'] 		=	strip_tags($new_instance['height']);
 		$instance['color_scheme']	=	strip_tags($new_instance['color_scheme']);
 		$instance['show_border']	=	strip_tags($new_instance['show_border']);
+		$instance['custom_css']         =	strip_tags($new_instance['custom_css']);
+		$instance['select_lng']         =	strip_tags($new_instance['select_lng']);
 
         return $instance;
     }
@@ -76,6 +81,8 @@ class facebook_widget extends WP_Widget {
 		$height			=	esc_attr($instance['height']);
 		$color_scheme	=	esc_attr($instance['color_scheme']);
 		$show_border	=	esc_attr($instance['show_border']);
+		$custom_css	=	esc_attr($instance['custom_css']);
+		$select_lng	=	esc_attr($instance['select_lng']);
 		
 		?>
 		<p>
@@ -138,6 +145,32 @@ class facebook_widget extends WP_Widget {
     			<option value="Yes"<?php selected( $instance['show_border'], 'Yes' ); ?>><?php _e('Yes'); ?></option>
     			<option value="No"<?php selected( $instance['show_border'], 'No' ); ?>><?php _e('No'); ?></option>
         	</select>
+        </p>
+       
+        <p>
+        	<label for="<?php echo $this->get_field_id('select_lng'); ?>"><?php _e('Select Language:'); ?></label>
+                <select name="<?php echo $this->get_field_name('select_lng'); ?>" id="<?php echo $this->get_field_id('select_lng'); ?>">
+        <?php
+        $filename = "https://www.facebook.com/translations/FacebookLocales.xml";
+        $langs = file_get_contents($filename);
+        $xmlcont = new SimpleXMLElement($langs);
+        $inc = 0;
+        if(!empty($xmlcont)) {
+            foreach ($xmlcont as $languages) {
+                $title = $languages[$inc]->englishName[0];
+                $representation = $languages[$inc]->codes->code->standard->representation[0];
+                ?>
+                <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
+                <?php
+                $inc++;
+            }
+        }
+        ?>
+        </select>
+        </p>
+        <p>
+        	<label for="<?php echo $this->get_field_id('custom_css'); ?>"><?php _e('Custom Css:'); ?></label>
+                <textarea rows="4" cols="30" name="<?php echo $this->get_field_name('custom_css'); ?>"><?php if(!empty($custom_css)) { echo trim($custom_css); }?></textarea>
         </p>
         
         <?php
