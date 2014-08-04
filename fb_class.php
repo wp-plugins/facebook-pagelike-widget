@@ -72,7 +72,7 @@ class facebook_widget extends WP_Widget {
     	 * Set Default Value for widget form
     	 */
     	
-    	$default_value	=	array("width" => "250", "height" => "350", "show_faces" => 1, "show_header" => 1,"show_border"=>0);
+    	$default_value	=	array("width" => "250", "height" => "350", "show_faces" => 1, "show_header" => 1,"show_border"=>0,'select_lng'=>'en_US');
     	$instance		=	wp_parse_args((array)$instance,$default_value);
         $title			=	esc_attr($instance['title']);
         $app_id 		=   esc_attr($instance['app_id']);
