@@ -30,12 +30,12 @@ Version 2.2
 Added option to add custom css for widget
 Added option to select language to show your Facebook widget in any language you want.
 
-I have tested my widget with following themes. Please let me know your theme name if my widget also work with it.
+I have tested my widget with following themes. Please let me know your theme name, if my widget also works with it.
 
 1) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen) <br />
-2) Twenty Thirteen (http://wordpress.org/themes/twentythirteen)
-3) Twenty Twelve (http://wordpress.org/themes/twentytwelve)
-4) Twenty Eleven (http://wordpress.org/themes/twentyeleven)
+2) Twenty Thirteen (http://wordpress.org/themes/twentythirteen) <br />
+3) Twenty Twelve (http://wordpress.org/themes/twentytwelve) <br />
+4) Twenty Eleven (http://wordpress.org/themes/twentyeleven) <br />
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap</a>. I will reply you as soon as possible.
 
