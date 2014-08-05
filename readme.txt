@@ -23,16 +23,19 @@ Also i have managed code in a better way than previous version. :-)
 Added support for localization (Multilanguage support)(Added .pot file)
 
 Version 2.1
-
-Added option to show or hide border from widget.
-
+Added option to show or hide border from widget
 Added default values to all needed fields while you setup widget, it will help you.
 
 Version 2.2
+Added option to add custom css for widget
+Added option to select language to show your Facebook widget in any language you want.
 
-Added option to add custom css for widget.
+I have tested my widget with following themes. Please let me know your theme name if my widget also work with it.
 
-Added option to select language to show your facebook widget in any language you want.
+1) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen)
+2) Twenty Thirteen (http://wordpress.org/themes/twentythirteen)
+3) Twenty Twelve (http://wordpress.org/themes/twentytwelve)
+4) Twenty Eleven (http://wordpress.org/themes/twentyeleven)
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap</a>. I will reply you as soon as possible.
 
