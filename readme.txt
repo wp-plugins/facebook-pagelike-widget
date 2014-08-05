@@ -32,7 +32,7 @@ Added option to select language to show your Facebook widget in any language you
 
 I have tested my widget with following themes. Please let me know your theme name if my widget also work with it.
 
-1) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen)
+1) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen) <br />
 2) Twenty Thirteen (http://wordpress.org/themes/twentythirteen)
 3) Twenty Twelve (http://wordpress.org/themes/twentytwelve)
 4) Twenty Eleven (http://wordpress.org/themes/twentyeleven)
