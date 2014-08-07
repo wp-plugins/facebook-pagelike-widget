@@ -151,7 +151,7 @@ class facebook_widget extends WP_Widget {
         	<label for="<?php echo $this->get_field_id('select_lng'); ?>"><?php _e('Select Language:'); ?></label>
                 <select name="<?php echo $this->get_field_name('select_lng'); ?>" id="<?php echo $this->get_field_id('select_lng'); ?>">
         <?php
-        $filename = "https://www.facebook.com/translations/FacebookLocales.xml";
+        $filename = "http://www.facebook.com/translations/FacebookLocales.xml";
         $langs = file_get_contents($filename);
         $xmlcont = new SimpleXMLElement($langs);
         $inc = 0;
