@@ -36,6 +36,7 @@ I have tested my widget with following themes. Please let me know your theme nam
 2) Twenty Thirteen (http://wordpress.org/themes/twentythirteen) <br />
 3) Twenty Twelve (http://wordpress.org/themes/twentytwelve) <br />
 4) Twenty Eleven (http://wordpress.org/themes/twentyeleven) <br />
+5) Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226) <br />
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap</a>. I will reply you as soon as possible.
 
