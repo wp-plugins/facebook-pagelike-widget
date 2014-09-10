@@ -3,7 +3,7 @@ Contributors: Milap
 Donate link:https://www.paypal.com/cgi-bin/webscr?business=cemilap.88@gmail.com&cmd=_xclick&currency_code=USD&amount=5&item_name=Offer%20me%20coffee
 Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking
 Requires at least: 3.0.1
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: trunk
 
 This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar.Also enabled short code for POST and PAGES.
