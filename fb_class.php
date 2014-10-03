@@ -157,8 +157,8 @@ class facebook_widget extends WP_Widget {
         $inc = 0;
         if(!empty($xmlcont)) {
             foreach ($xmlcont as $languages) {
-                $title = $languages[$inc]->englishName[0];
-                $representation = $languages[$inc]->codes->code->standard->representation[0];
+                $title = $languages[0]->englishName[0];
+                $representation = $languages[0]->codes->code->standard->representation[0];
                 ?>
                 <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
                 <?php
