@@ -36,7 +36,7 @@ class facebook_widget extends WP_Widget {
         wp_enqueue_script( 'myownscript' );
         $local_variables = array('app_id' => $app_id,'select_lng'=>$select_lng);
         wp_localize_script( 'myownscript', 'vars', $local_variables );
-        echo '<center><div class="loader"><img src="http://localhost/wordpress/wp-content/plugins/facebook-pagelike-widget/loader.gif" /></div></center>';
+        echo '<center><div class="loader"><img src="'.plugins_url().'/facebook-pagelike-widget/loader.gif" /></div></center>';
         echo '<div id="fb-root"></div>
         <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-header="'.$show_header.'" data-stream="'.$show_stream.'" data-show-border="'.$show_border.'" style="'.$custom_css.'"></div>';
         echo $after_widget;
