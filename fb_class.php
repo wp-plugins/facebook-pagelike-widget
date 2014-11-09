@@ -36,7 +36,7 @@ class facebook_widget extends WP_Widget {
         wp_enqueue_script( 'myownscript' );
         $local_variables = array('app_id' => $app_id,'select_lng'=>$select_lng);
         wp_localize_script( 'myownscript', 'vars', $local_variables );
-        
+        echo '<center><div class="loader"><img src="http://localhost/wordpress/wp-content/plugins/facebook-pagelike-widget/loader.gif" /></div></center>';
         echo '<div id="fb-root"></div>
         <div class="fb-like-box" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-colorscheme="'.$color_scheme.'" data-show-faces="'.$show_faces.'" data-header="'.$show_header.'" data-stream="'.$show_stream.'" data-show-border="'.$show_border.'" style="'.$custom_css.'"></div>';
         echo $after_widget;
@@ -76,13 +76,13 @@ class facebook_widget extends WP_Widget {
     	$instance		=	wp_parse_args((array)$instance,$default_value);
         $title			=	esc_attr($instance['title']);
         $app_id 		=   esc_attr($instance['app_id']);
-		$fb_url			=	esc_attr($instance['fb_url']);
-		$width			=	esc_attr($instance['width']);
-		$height			=	esc_attr($instance['height']);
-		$color_scheme	=	esc_attr($instance['color_scheme']);
-		$show_border	=	esc_attr($instance['show_border']);
-		$custom_css	=	esc_attr($instance['custom_css']);
-		$select_lng	=	esc_attr($instance['select_lng']);
+        $fb_url			=	esc_attr($instance['fb_url']);
+        $width			=	esc_attr($instance['width']);
+        $height			=	esc_attr($instance['height']);
+        $color_scheme	=	esc_attr($instance['color_scheme']);
+        $show_border	=	esc_attr($instance['show_border']);
+        $custom_css	=	esc_attr($instance['custom_css']);
+        $select_lng	=	esc_attr($instance['select_lng']);
 		
 		?>
 		<p>
@@ -146,33 +146,83 @@ class facebook_widget extends WP_Widget {
     			<option value="No"<?php selected( $instance['show_border'], 'No' ); ?>><?php _e('No'); ?></option>
         	</select>
         </p>
-       
+        <?php
+        $filename = "http://www.facebook.com/translations/FacebookLocales.xml";
+        if(ini_get('allow_url_fopen')) {
+            $langs = file_get_contents($filename);
+            $xmlcont = new SimpleXMLElement($langs);
+        ?>
         <p>
         	<label for="<?php echo $this->get_field_id('select_lng'); ?>"><?php _e('Select Language:'); ?></label>
                 <select name="<?php echo $this->get_field_name('select_lng'); ?>" id="<?php echo $this->get_field_id('select_lng'); ?>">
-        <?php
-        $filename = "http://www.facebook.com/translations/FacebookLocales.xml";
-        $langs = file_get_contents($filename);
-        $xmlcont = new SimpleXMLElement($langs);
-        $inc = 0;
-        if(!empty($xmlcont)) {
-            foreach ($xmlcont as $languages) {
-                $title = $languages[0]->englishName[0];
-                $representation = $languages[0]->codes->code->standard->representation[0];
-                ?>
-                <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
-                <?php
-                $inc++;
+                    <?php        
+                    if(!empty($xmlcont)) {
+                        foreach ($xmlcont as $languages) {
+                            $representation = $languages[0]->codes->code->standard->representation[0];
+                            ?>
+                            <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
+                            <?php
+                        }
+                    }
+                    ?>
+            </select>
+        </p>
+        <?php }
+        elseif(function_exists('curl_version')) {
+            if(!function_exists('file_get_contents_curl_mine')) {
+                function file_get_contents_curl_mine($url) {
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_HEADER, 0);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                    curl_setopt($ch, CURLOPT_URL, $url);
+                    $data = curl_exec($ch);
+                    curl_close($ch);
+                    return $data;
+                }
             }
+            if(!function_exists('xmlstring2array_mine')) {
+                function xmlstring2array_mine($string)
+                {
+                    $xml   = simplexml_load_string($string, 'SimpleXMLElement', LIBXML_NOCDATA);
+                    $array = json_decode(json_encode($xml), TRUE);
+                    return $array;
+                }
+            }
+            $langs      =   file_get_contents_curl_mine($filename);
+            $xmlcont    =   xmlstring2array_mine($langs);
+            $xmlcont    =   $xmlcont['locale'];
+            ?>   
+            <p>
+        	<label for="<?php echo $this->get_field_id('select_lng'); ?>"><?php _e('Select Language:'); ?></label>
+                <select name="<?php echo $this->get_field_name('select_lng'); ?>" id="<?php echo $this->get_field_id('select_lng'); ?>">
+                    <?php
+                    if(!empty($xmlcont)) {
+                        foreach( $xmlcont as $languages ) {
+                            $title          =   $languages['englishName'];
+                            $representation =   $languages['codes']['code']['standard']['representation'];
+                            ?>
+                            <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
+                            <?php
+                            }
+                    }
+                    ?>
+                </select>
+        </p>    
+            <?php
+        } else {
+           ?>
+            <p>
+        	<label for="<?php echo $this->get_field_id('select_lng'); ?>"><?php _e('Language : '); ?></label>
+                <b>English</b> <br />(Your PHP configuration does not allow to read <a href="http://www.facebook.com/translations/FacebookLocales.xml" target="_blank">this</a> file.
+                To unable language option, enable curl extension OR allow_url_fopen in your server configuration.)
+        </p>       
+            <?php
         }
         ?>
-        </select>
-        </p>
         <p>
         	<label for="<?php echo $this->get_field_id('custom_css'); ?>"><?php _e('Custom Css:'); ?></label>
                 <textarea rows="4" cols="30" name="<?php echo $this->get_field_name('custom_css'); ?>"><?php if(!empty($custom_css)) { echo trim($custom_css); }?></textarea>
         </p>
-        
         <?php
     }
 }
