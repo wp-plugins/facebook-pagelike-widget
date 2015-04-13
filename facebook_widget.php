@@ -11,6 +11,13 @@ Author: Milap Patel
 Version: 2.2
 Author URI: http://patelmilap.wordpress.com/
 */
+function fbwidget_activate() {}
+register_activation_hook( __FILE__, 'fbwidget_activate' );
+
+function fbwidget_deactivate() {
+    	unregister_sidebar( 'facebook_widget' );
+}
+register_deactivation_hook( __FILE__, 'fbwidget_deactivate' );
 
 if(!defined('FB_WIDGET_PLUGIN_URL'))
 	define('FB_WIDGET_PLUGIN_URL', plugin_dir_url( __FILE__ ));
