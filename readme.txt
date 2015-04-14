@@ -6,7 +6,7 @@ Requires at least: 3.0.1
 Tested up to: 4.1.1
 Stable tag: trunk
 
-This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar.Also enabled short code for POST and PAGES.
+This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar. Also enabled short code for POST and PAGES.
 
 == Description ==
 
@@ -33,6 +33,9 @@ Added default values to all needed fields while you setup widget, it will help y
 Version 2.2
 Added option to add custom css for widget
 Added option to select language to show your Facebook widget in any language you want.
+
+Version 2.3
+Added options like Border, Language and custom css to shortcode function.
 
 I have tested my widget with following themes. Please let me know your theme name, if my widget also works with it.
 
