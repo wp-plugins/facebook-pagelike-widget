@@ -6,7 +6,7 @@ class facebook_widget extends WP_Widget {
 
     /** constructor */
     function facebook_widget() {
-        parent::WP_Widget(false, $name = 'Facebook Widget');
+        parent::WP_Widget("fbw_id", $name = 'Facebook Widget');
     }
 
     /** @see WP_Widget::widget */

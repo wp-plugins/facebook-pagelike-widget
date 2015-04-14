@@ -8,7 +8,7 @@ Plugin Name: Facebook Widget
 Plugin URI: http://patelmilap.wordpress.com/
 Description: This widget adds a Simple Facebook page Like Widget into your wordpress website sidebar.
 Author: Milap Patel
-Version: 2.2
+Version: 2.3
 Author URI: http://patelmilap.wordpress.com/
 */
 function fbwidget_activate() {}
