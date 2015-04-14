@@ -58,6 +58,6 @@ For more details,
 
 <a href=\"http://codex.wordpress.org/Managing%5C\_Plugins\">http://codex.wordpress.org/Managing\_Plugins</a>
 == Screenshots ==
-1. See screenshot-1.jpeg explains how you can configure your plugin in admin widget area.
+1. See screenshot-1.png - Shows how your plugin will display in frontend.
 
-2. screenshot-2.jpeg shows how your plugin will display in frontend.
+2. screenshot-2.png - Explains how you can configure plugin in admin widget area.
