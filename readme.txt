@@ -48,7 +48,7 @@ I have tested my widget with following themes. Please let me know your theme nam
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap On Facebook</a>. or you can contact me on my <a href=\"https://patelmilap.wordpress.com/contact-me\">Blog</a>.I will try to reply you as soon as possible.
 
-If my Plugin worked for you, please leave your review <a href=\"https://wordpress.org/support/view/plugin-reviews/facebook-pagelike-widget\">Here</a> , so people can use it with confidence. God bless you..!!
+If my Plugin worked for you, please leave your review <a href=\"https://wordpress.org/support/view/plugin-reviews/facebook-pagelike-widget\" target="_blank">Here</a> , so people can use it with confidence. God bless you..!!
 
 == Installation ==
 
