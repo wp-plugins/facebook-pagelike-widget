@@ -15,7 +15,8 @@ function fbwidget_activate() {}
 register_activation_hook( __FILE__, 'fbwidget_activate' );
 
 function fbwidget_deactivate() {
-    	unregister_sidebar( 'facebook_widget' );
+        delete_option( 'widget_fbw_id' );
+        unregister_sidebar( 'facebook_widget' );
 }
 register_deactivation_hook( __FILE__, 'fbwidget_deactivate' );
 
