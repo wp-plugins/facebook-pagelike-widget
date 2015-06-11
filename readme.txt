@@ -39,13 +39,14 @@ Added options like Border, Language and custom css to shortcode function.
 
 I have tested my widget with following themes. Please let me know your theme name, if my widget also works with it.
 
-1) Twenty Fifteen (https://wordpress.org/themes/twentyfifteen/) <br />
-2) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen) <br />
-3) Twenty Thirteen (http://wordpress.org/themes/twentythirteen) <br />
-4) Twenty Twelve (http://wordpress.org/themes/twentytwelve) <br />
-5) Twenty Eleven (http://wordpress.org/themes/twentyeleven) <br />
-6) Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226) <br />
-6) Simply Read (https://wordpress.org/themes/simply-read/) <br />
+- Twenty Fifteen (https://wordpress.org/themes/twentyfifteen/) <br />
+- Twenty Fourteen (http://wordpress.org/themes/twentyfourteen) <br />
+- Twenty Thirteen (http://wordpress.org/themes/twentythirteen) <br />
+- Twenty Twelve (http://wordpress.org/themes/twentytwelve) <br />
+- Twenty Eleven (http://wordpress.org/themes/twentyeleven) <br />
+- Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226) <br />
+- Simply Read (https://wordpress.org/themes/simply-read/) <br />
+- Bridge (http://themeforest.net/item/bridge-creative-multipurpose-wordpress-theme/7315054)
 
 If you have any question regarding plugin, mail me on <a href=\"mailto:cemilap.88@gmail.com\">cemilap.88@gmail.com</a> or add me on <a href=\"http://www.facebook.com/milap112\">Milap On Facebook</a>. or you can contact me on my <a href=\"https://patelmilap.wordpress.com/contact-me\">Blog</a>.I will try to reply you as soon as possible.
 
