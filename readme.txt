@@ -21,7 +21,7 @@ In latest version, support to short code is added to display Facebook like plugi
 Open your Post or Page, Add [fb_widget] into Post or Page, Save it. You are done.
 
 
-If you have any question regarding plugin, mail me on cemilap.88@gmail.com or add me on Milap On Facebook. or you can contact me on my Blog.I will try to reply you as soon as possible.
+If you have any question regarding plugin, mail me on cemilap.88@gmail.com or add me on [Facebook](http://www.facebook.com/milap112). or you can contact me on my [Blog](http://patelmilap.wordpress.com/contact-me/).I will try to reply you as soon as possible.
 
 If my Plugin worked for you, please leave your review Here , so people can use it with confidence. God bless you..!!
 
@@ -34,11 +34,11 @@ For more details,
 http://codex.wordpress.org/Managing_Plugins
 
 == Frequently Asked Questions ==
-= How do I sign up for a Facebook application ID for my website? 
+- How do I sign up for a Facebook application ID for my website? 
 
 * You may create a new Facebook application or edit your existing Facebook application through the [Facebook Developers application interface](https://developers.facebook.com/apps/). You need to signup for a Facebook Developer account first.
 
-= I am not sure how to get Facebook application ID ?
+- I am not sure how to get Facebook application ID ?
 
 * If you are not able to create Facebook application or you do not know how to do that, do not worry, you can use my default application id `1590918427791514` . I have created it for plugin users and it should work like a charm for you.
 
@@ -48,36 +48,35 @@ http://codex.wordpress.org/Managing_Plugins
 3. screenshot-3.png - Explains how Shortcode works into POST or PAGE.
 
 == Other Notes ==
+
 I have tested my widget with following themes. Please let me know your theme name, if my widget also works with it.
 
 1) Twenty Fifteen (https://wordpress.org/themes/twentyfifteen/) 
-
 2) Twenty Fourteen (http://wordpress.org/themes/twentyfourteen) 
-
 3) Twenty Thirteen (http://wordpress.org/themes/twentythirteen) 
-
 4) Twenty Twelve (http://wordpress.org/themes/twentytwelve) 
-
 5) Twenty Eleven (http://wordpress.org/themes/twentyeleven) 
-
 6) Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226) 
-
 6) Simply Read (https://wordpress.org/themes/simply-read/) 
 
 == Changelog ==
 * Version 3.0
+
 - Plugin updated to Facebook Graph API v2.3.
 - Removed old options like show/hide border, color scheme.
 
 * Version 2.3
+
 - Added options like Border, Language and custom css to shortcode function.
 
 * Version 2.2
+
 - Added support for localization (Multilanguage support)(Added .pot file)
 - Added option to add custom css for widget
 - Added option to select language to show your Facebook widget in any language you want.
 
 * Version 2.1
+
 - Added option to show or hide border from widget
 - Added default values to all needed fields while you setup widget, it will help you.
 
