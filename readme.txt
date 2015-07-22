@@ -46,7 +46,6 @@ http://codex.wordpress.org/Managing_Plugins
 
 1. See screenshot-1.png - Shows how your plugin will display in frontend.
 2. screenshot-2.png - Explains how you can configure plugin in admin widget area.
-3. screenshot-3.png - Explains how Shortcode works into POST or PAGE.
 
 == Other Notes ==
 
