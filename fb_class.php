@@ -71,8 +71,8 @@ function form($instance) {
     	 * Set Default Value for widget form
     	 */
     	
-    	$default_value	            =   array("width" => "250", "height" => "350", 'select_lng'=>'en_US','data_small_header'=>'false','data_adapt_container_width'=>'false','data_hide_cover'=>'false','data_show_facepile'=>'false','data_show_posts'=>'true');
-    	$instance		            =	wp_parse_args((array)$instance,$default_value);
+    	$defaults      	            =   array('title'=>'Like Us On Facebook','width' => '250', 'height' => '350', 'select_lng'=>'en_US','data_small_header'=>'false','data_adapt_container_width'=>'false','data_hide_cover'=>'false','data_show_facepile'=>'on','data_show_posts'=>'on');
+    	$instance		            =	wp_parse_args((array)$instance,$defaults);
         $title			            =	esc_attr($instance['title']);
         $app_id 		            =   esc_attr($instance['app_id']);
         $fb_url			            =	esc_attr($instance['fb_url']);
