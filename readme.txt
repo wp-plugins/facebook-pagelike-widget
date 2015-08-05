@@ -64,6 +64,7 @@ I have tested my widget with following themes. Please let me know your theme nam
 = Version 3.0 =
 * Plugin updated to Facebook Graph API v2.3.
 * Removed old options like show/hide border, color scheme.
+* Removed notices and warnings.
 
 = Version 2.3 =
 * Added options like Border, Language and custom css to shortcode function.
