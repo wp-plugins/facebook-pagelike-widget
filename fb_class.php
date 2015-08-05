@@ -74,15 +74,15 @@ function form($instance) {
     	$defaults      	            =   array('title'=>'Like Us On Facebook','width' => '250', 'height' => '350', 'select_lng'=>'en_US','data_small_header'=>'false','data_adapt_container_width'=>'false','data_hide_cover'=>'false','data_show_facepile'=>'on','data_show_posts'=>'on');
     	$instance		            =	wp_parse_args((array)$instance,$defaults);
         $title			            =	esc_attr($instance['title']);
-        $app_id 		            =   esc_attr($instance['app_id']);
-        $fb_url			            =	esc_attr($instance['fb_url']);
+        $app_id 		            =   isset($instance['app_id']) ? esc_attr($instance['app_id']) : "503595753002055";
+        $fb_url                     =   isset($instance['fb_url']) ? esc_attr($instance['fb_url']) : "http://www.facebook.com/wordpress";
         $width			            =	esc_attr($instance['width']);
         $height			            =	esc_attr($instance['height']);
         $data_adapt_container_width =   esc_attr($instance['data_adapt_container_width']);
         $data_hide_cover            =   esc_attr($instance['data_hide_cover']);
         $data_show_facepile         =   esc_attr($instance['data_show_facepile']);
         $data_show_posts            =   esc_attr($instance['data_show_posts']);
-        $custom_css	                =	esc_attr($instance['custom_css']);
+        $custom_css	                =	isset($instance['custom_css']) ? esc_attr($instance['custom_css']) : "";
         $select_lng	                =	esc_attr($instance['select_lng']);
         ?>
         <p>
@@ -91,11 +91,11 @@ function form($instance) {
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('app_id'); ?>"><?php _e('Facebook Application Id:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('app_id'); ?>" name="<?php echo $this->get_field_name('app_id'); ?>" type="text" value="<?php echo empty($app_id) ? '503595753002055' : $app_id;?>" />
+            <input class="widefat" id="<?php echo $this->get_field_id('app_id'); ?>" name="<?php echo $this->get_field_name('app_id'); ?>" type="text" value="<?php echo $app_id?>" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('fb_url'); ?>"><?php _e('Facebook Page Url:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('fb_url'); ?>" name="<?php echo $this->get_field_name('fb_url'); ?>" type="text" value="<?php echo empty($fb_url) ? 'http://www.facebook.com/wordpress' : $fb_url; ?>" />
+            <input class="widefat" id="<?php echo $this->get_field_id('fb_url'); ?>" name="<?php echo $this->get_field_name('fb_url'); ?>" type="text" value="<?php echo $fb_url; ?>" />
             <small>
                 <?php _e('Works with only');?>
                 <a href="http://www.facebook.com/help/?faq=174987089221178" target="_blank">
@@ -206,7 +206,7 @@ function form($instance) {
         ?>
         <p>
            <label for="<?php echo $this->get_field_id('custom_css'); ?>"><?php _e('Custom Css:'); ?></label>
-           <textarea rows="4" cols="30" name="<?php echo $this->get_field_name('custom_css'); ?>"><?php if(!empty($custom_css)) { echo trim($custom_css); }?></textarea>
+           <textarea rows="4" cols="30" name="<?php echo $this->get_field_name('custom_css'); ?>"><?php echo trim($custom_css);?></textarea>
         </p>
         <script type="text/javascript">
         function shoWidth() {
