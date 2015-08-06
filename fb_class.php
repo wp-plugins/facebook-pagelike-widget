@@ -37,7 +37,7 @@ class facebook_widget extends WP_Widget {
         wp_localize_script( 'myownscript', 'vars', $local_variables );
         echo '<center><div class="loader"><img src="'.plugins_url().'/facebook-pagelike-widget/loader.gif" /></div></center>';
         echo '<div id="fb-root"></div>
-        <div class="fb-page" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-small-header="'.$data_small_header.'" data-adapt-container-width="'.$data_adapt_container_width.'" data-hide-cover="'.$data_hide_cover.'" data-show-facepile="'.$data_show_facepile.'" data-show-posts="'.$data_show_posts.'" style="'.$custom_css.'">';
+        <div class="fb-page" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-small-header="'.$data_small_header.'" data-adapt-container-width="'.$data_adapt_container_width.'" data-hide-cover="'.$data_hide_cover.'" data-show-facepile="'.$data_show_facepile.'" data-show-posts="'.$data_show_posts.'" style="'.$custom_css.'"></div>';
         echo $after_widget;
     }
 

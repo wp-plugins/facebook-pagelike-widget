@@ -25,7 +25,7 @@ function fb_plugin_shortcode() {
             $local_variables = array('app_id' => $app_id,'select_lng'=>$select_lng);
             wp_localize_script('myownscript', 'vars', $local_variables);
             $result .= '<div id="fb-root"></div>
-            <div class="fb-page" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-small-header="'.$data_small_header.'" data-adapt-container-width="'.$data_adapt_container_width.'" data-hide-cover="'.$data_hide_cover.'" data-show-facepile="'.$data_show_facepile.'" data-show-posts="'.$data_show_posts.'" style="'.$custom_css.'">';
+            <div class="fb-page" data-href="'.$fb_url.'" data-width="'.$width.'" data-height="'.$height.'" data-small-header="'.$data_small_header.'" data-adapt-container-width="'.$data_adapt_container_width.'" data-hide-cover="'.$data_hide_cover.'" data-show-facepile="'.$data_show_facepile.'" data-show-posts="'.$data_show_posts.'" style="'.$custom_css.'"></div>';
             $result .= $after_widget;
             return $result;
         }
