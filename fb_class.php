@@ -5,8 +5,10 @@
 class facebook_widget extends WP_Widget {
 
     /** constructor */
-    function facebook_widget() {
-        parent::WP_Widget("fbw_id", $name = 'Facebook Page Like Widget');
+    function __construct() {
+        parent::__construct(
+            'fbw_id', __( 'Facebook Page Like Widget', 'text_domain' )
+        );
     }
 
     /** @see WP_Widget::widget */
