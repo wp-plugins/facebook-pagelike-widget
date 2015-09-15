@@ -1,6 +1,6 @@
 === Facebook Widget ===
 Contributors: Milap
-Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking
+Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking, Facebook feeds, Facebook feed widget, WordPress Social Share
 Donate link: https://www.paypal.com/cgi-bin/webscr?business=cemilap.88@gmail.com&cmd=_xclick¤cy_code=USD&amount=5&item_name=Offer%20me%20coffee
 Requires at least: 3.0.1
 Tested up to: 4.3
@@ -58,6 +58,7 @@ I have tested my widget with following themes. Please let me know your theme nam
 * Twenty Eleven (http://wordpress.org/themes/twentyeleven)
 * Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226)
 * Simply Read (https://wordpress.org/themes/simply-read/)
+* Evolve (https://wordpress.org/themes/evolve/)
 
 == Changelog ==
 
