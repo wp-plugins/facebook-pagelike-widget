@@ -145,9 +145,10 @@ function form($instance) {
                 <?php        
                 if(!empty($xmlcont)) {
                     foreach ($xmlcont as $languages) {
-                        $representation = $languages[0]->codes->code->standard->representation[0];
+                        $lan_title          =   $languages->englishName;
+                        $representation     =   $languages[0]->codes->code->standard->representation[0];
                         ?>
-                        <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($title." => ".$representation); ?></option>
+                        <option value="<?php echo $representation;?>"<?php selected( $instance['select_lng'], $representation ); ?>><?php _e($lan_title." => ".$representation); ?></option>
                         <?php
                     }
                 }
