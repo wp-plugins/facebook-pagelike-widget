@@ -1,6 +1,6 @@
 === Facebook Widget ===
 Contributors: Milap
-Tags: Facebook,Facebook like box,Facebook simple like, Facebook fan pages, Facebook like button, Facebook button share, Facebook Social bookmarking, Facebook feeds, Facebook feed widget, WordPress Social Share
+Tags: facebook, facebook like box, facebook simple like, facebook fan pages, facebook like button, facebook button share, facebook social bookmarking, facebook feeds, facebook feed widget, social share, wordpress social share, socialmedia, social media widget, social media sharing, social media icon 
 Donate link: https://www.paypal.com/cgi-bin/webscr?business=cemilap.88@gmail.com&cmd=_xclick¤cy_code=USD&amount=5&item_name=Offer%20me%20coffee
 Requires at least: 3.0.1
 Tested up to: 4.3
@@ -59,8 +59,15 @@ I have tested my widget with following themes. Please let me know your theme nam
 * Avada (http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226)
 * Simply Read (https://wordpress.org/themes/simply-read/)
 * Evolve (https://wordpress.org/themes/evolve/)
+* Eco Nature - Environment & Ecology (http://themeforest.net/item/eco-nature-environment-ecology-wordpress-theme/8497776/)
+* Mantra (https://wordpress.org/themes/mantra/)
+* Weaver-ii (https://wordpress.org/themes/weaver-ii/)
+* Bazar (http://preview.yithemes.com/bazar/)
 
 == Changelog ==
+
+= Version 3.1 =
+* Removed offset warning for language dropdown.
 
 = Version 3.0 =
 * Plugin updated to Facebook Graph API v2.3.
