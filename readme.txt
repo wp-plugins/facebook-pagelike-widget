@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This widget adds a Simple Facebook page Like Widget into your WordPress website sidebar. Also enabled short code for POST and PAGE.
+This widget adds a Simple Facebook page Like Widget into your WordPress website Sidebar or Footer area. Also enabled short code for POST and PAGE.
 
 == Description ==
 
