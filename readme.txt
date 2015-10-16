@@ -65,6 +65,7 @@ I have tested my widget with following themes. Please let me know your theme nam
 * Mantra (https://wordpress.org/themes/mantra/)
 * Weaver-ii (https://wordpress.org/themes/weaver-ii/)
 * Bazar (http://preview.yithemes.com/bazar/)
+* News Pro (http://my.studiopress.com/themes/news/)
 
 == Changelog ==
 
